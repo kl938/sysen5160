@@ -43,6 +43,6 @@ if st.checkbox('Show dataframe'):
     
 """Lines 45-48 from Streamlit "Data Display" example"""
 col1, col2, col3 = st.columns(3)
-col1.metric("Temperature", "70 °F", "1.2 °F")
-col2.metric("Wind", "9 mph", "-8%")
-col3.metric("Humidity", "86%", "4%")
+col1.metric("Bitcoin", "$50,000.00", "10%")
+col2.metric("Dogecoin", "$0.00001", "-10%")
+col3.metric("Sysen5130coin", "$10,000.00", "10%")
