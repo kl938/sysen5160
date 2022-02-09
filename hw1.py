@@ -64,3 +64,9 @@ col1.line_chart(data)
 
 col2.subheader("A narrow column with the data")
 col2.write(data)
+
+"""From Streamlit "Layouts and Containers" example"""
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
