@@ -51,6 +51,6 @@ if uploaded_file is not None:
      st.write(dataframe)
     
 """From Streamlit "Media Elements" example"""
-image = Image.open('sunrise.jpg')
+image = Image.open('cornell.png')
 
-st.image(image, caption='Sunrise by the mountains')
+st.image(image, caption='Cornell University')
