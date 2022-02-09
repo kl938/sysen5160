@@ -10,7 +10,29 @@ from PIL import Image
 """kl938@cornell.edu"""
 """08 February 2022"""
 
+"""From Streamlit "Write and Magic" example"""
+st.write(1234)
+st.write(pd.DataFrame({
+     'first column': [1, 2, 3, 4],
+     'second column': [10, 20, 30, 40],
+ }))
 
+"""From Streamlit "Write and Magic" example"""
+df = pd.DataFrame({'col1': [1,2,3]})
+df  # 👈 Draw the dataframe
+
+x = 10
+'x', x  # 👈 Draw the string 'x' and then the value of x
+
+# Also works with most supported chart types
+import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+fig  # 👈 Draw a Matplotlib chart
 
 """From Streamlit "Data Display" example"""
 dataframe = pd.DataFrame(
@@ -70,3 +92,24 @@ add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
     ("Email", "Home phone", "Mobile phone")
 )
+
+"""From Streamlit "Status elements" example"""
+st.success('This is a success message!')
+
+"""From Streamlit "Status Elements" example"""
+st.warning('This is a warning')
+
+"""From Streamlit Control flow example"""
+with st.form("my_form"):
+    st.write("Inside the form")
+    slider_val = st.slider("Form slider")
+    checkbox_val = st.checkbox("Form checkbox")
+
+    # Every form must have a submit button.
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+        st.write("slider", slider_val, "checkbox", checkbox_val)
+
+st.write("Outside the form")
+
+""" """
