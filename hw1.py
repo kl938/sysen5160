@@ -96,7 +96,8 @@ if not name:
 st.success('Thank you for inputting a name.')
 
 """From Streamlit "Utilities" example"""
-dataframe = pd.DataFrame({
+st.write(1234)
+st.write(pd.DataFrame({
      'first column': [1, 2, 3, 4],
      'second column': [10, 20, 30, 40],
  }))
