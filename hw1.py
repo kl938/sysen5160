@@ -8,6 +8,10 @@ import pandas as pd
 """kl938@cornell.edu"""
 """08 February 2022"""
 
+
+
+
+
 """Lines 13-17 from Streamlit "Getting Started" example"""
 st.write("Here's our first attempt at using data to create a table:")
 st.write(pd.DataFrame({
@@ -36,3 +40,9 @@ if st.checkbox('Show dataframe'):
        columns=['a', 'b', 'c'])
 
     chart_data
+    
+"""Lines 45-48 from Streamlit "Data Display" example"""
+col1, col2, col3 = st.columns(3)
+col1.metric("Temperature", "70 °F", "1.2 °F")
+col2.metric("Wind", "9 mph", "-8%")
+col3.metric("Humidity", "86%", "4%")
