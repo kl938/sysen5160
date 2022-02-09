@@ -46,3 +46,9 @@ col1, col2, col3 = st.columns(3)
 col1.metric("Bitcoin", "$50,000.00", "10%")
 col2.metric("Dogecoin", "$0.00001", "-10%")
 col3.metric("Sysen5130coin", "$10,000.00", "10%")
+
+"""Lines 51-54 from Streamlit "Input Widgets" example"""
+d = st.date_input(
+     "When's your birthday",
+     datetime.date(2019, 7, 6))
+st.write('Your birthday is:', d)
