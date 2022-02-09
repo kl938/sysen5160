@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import datetime
 from PIL import Image
+import matplotlib
 
 """SYSEN5160"""
 """HW1"""
