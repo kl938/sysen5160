@@ -114,3 +114,18 @@ st.set_page_config(
          'About': "# This is a header. This is an *extremely* cool app!"
      }
  )
+
+"""From Streamlit "Performance" example"""
+@st.experimental_memo
+def square(x):
+    return x**2
+
+@st.experimental_memo
+def cube(x):
+    return x**3
+
+if st.button("Clear All"):
+    # Clear values from *all* memoized functions:
+    # i.e. clear values from both square and cube
+    st.experimental_memo.clear()
+
