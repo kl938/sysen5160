@@ -50,6 +50,6 @@ col3.metric("Sysen5130coin", "$10,000.00", "10%")
 
 """Lines 51-54 from Streamlit "Input Widgets" example"""
 d = st.date_input(
-     "When's your birthday",
-     datetime.date(2019, 7, 6))
-st.write('Your birthday is:', d)
+     "What day is it today?",
+     datetime.date(2022, 8, 2))
+st.write('Today is:', d)
