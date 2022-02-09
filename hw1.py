@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import datetime
 from PIL import Image
-import matplotlib.pyplot as plt
 
 """SYSEN5160"""
 """HW1"""
@@ -17,26 +16,6 @@ st.write(pd.DataFrame({
      'first column': [1, 2, 3, 4],
      'second column': [10, 20, 30, 40],
  }))
-
-"""From Streamlit "Write and Magic" example"""
-df = pd.DataFrame({'col1': [1,2,3]})
-df  # Draw the dataframe
-
-x = 10
-'x', x  # Draw the string 'x' and then the value of x
-
-arr = np.random.normal(1, 1, size=100)
-fig, ax = plt.subplots()
-ax.hist(arr, bins=20)
-
-fig  # Draw a Matplotlib chart
-
-"""From Streamlit "Data Display" example"""
-dataframe = pd.DataFrame(
-    np.random.randn(10, 20),
-    columns=('col %d' % i for i in range(20)))
-
-st.dataframe(dataframe.style.highlight_max(axis=0))
     
 """From Streamlit "Data Display" example"""
 col1, col2, col3 = st.columns(3)
@@ -109,5 +88,9 @@ with st.form("my_form"):
 
 st.write("Outside the form")
 
-""" """
-
+"""From Streamlit "Control Flow" example"""
+name = st.text_input('Name')
+if not name:
+  st.warning('Please input a name.')
+  st.stop()
+st.success('Thank you for inputting a name.')
